@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Data warehouse</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--设置网页图标-->
+    <link rel="shortcut icon" href="images/movie.png" type=”image/x-icon”/>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+<div class="query-form row">
+    <form role="form" class="col-md-offset-1 col-md-10" method="post" action="search">
+        <div class="col-md-5">
+            <div class="form-group">
+                <input type="number" class="form-control" name="year" id="year" placeholder="year">
+                <label for="year">年</label>
+            </div>
+            <div class="form-group">
+                <select class="form-control short-form" name="month" id="month">
+                    <option></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <label for="month">月</label>
+            </div>
+            <div class="form-group">
+                <select class="form-control short-form" name="date" id="date">
+                    <option></option>
+                </select>
+                <label for="month">日</label>
+            </div>
+        </div>
+        <div class="form-group col-md-offset-1 col-md-2">
+            <label for="quarter">第</label>
+            <select class="form-control short-form" name="quarter" id="quarter">
+                <option></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+            <label for="quarter">季度</label>
+        </div>
+        <div class="form-group col-md-offset-1 col-md-2">
+            <label for="day">星期</label>
+            <select class="form-control short-form" name="day" id="day">
+                <option></option>
+                <option>一</option>
+                <option>二</option>
+                <option>三</option>
+                <option>四</option>
+                <option>五</option>
+                <option>六</option>
+                <option>日</option>
+            </select>
+        </div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon">电影名称</span>
+            <input name="movie" id="moive" type="text" class="form-control" placeholder="Moive name">
+        </div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon">导演姓名</span>
+            <input name="director" id="director" type="text" class="form-control" placeholder="Director">
+        </div>
+        <div class="input-group col-md-2">
+            <span class="input-group-addon">类别</span>
+            <input name="category" id="category" type="text" class="form-control" placeholder="Category">
+        </div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon">主演演员</span>
+            <input name="hero" id="hero" type="text" class="form-control" placeholder="Hero actor">
+        </div>
+        <div class="input-group col-md-4">
+            <span class="input-group-addon">参演演员</span>
+            <input name="supporting_role" id="supporting_role" type="text" class="form-control" placeholder="Supporting role">
+        </div>
+        <div class="input-group col-md-2">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="result row">
+    <div class="col-md-6" id="db">
+        <h2 class="title">MySQL<span class="time">(Time:12345 ms)</span></h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6" id="dfs">
+        <h2 class="title">HDFS<span class="time">(Time:12345 ms)</span></h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            <tr onclick="clickMovie('0767815335')">
+                <td>0767815335</td>
+                <td>fsafdsafds</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

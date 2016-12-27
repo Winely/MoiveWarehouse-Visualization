@@ -1,0 +1,49 @@
+body{
+    margin-top: 20px;
+}
+
+.form-group{
+    display: inline;
+}
+
+.form-control{
+    display: inline;
+}
+
+#year{
+    width:100px;
+}
+
+.query-form .short-form{
+    width:80px;
+}
+
+.query-form .input-group{
+    display: inline-table;
+    margin: 10px;
+    float: inherit;
+}
+
+.btn{
+    width: 100%;
+}
+
+.query-form{
+    border-bottom: solid 1px #eee;
+}
+
+.title .time{
+    color: #878787;
+    font-size: smaller;
+    display: inline;
+}
+
+.title{
+    text-align: center;
+}
+
+.table{
+    width: 94%;
+    margin: auto;
+}
+
