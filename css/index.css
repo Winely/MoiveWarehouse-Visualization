@@ -57,7 +57,11 @@
 
 #category-label{
     text-align: right;
-    line-height: 2.5em;
-    padding-right: 0;
+    padding-left: 0;
+    width:5%;
+}
+select.category {
+    display: inline;
+    width: 31%;
 }
 
