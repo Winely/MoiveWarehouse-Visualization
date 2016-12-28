@@ -15,9 +15,9 @@
 <body>
 <div class="query-form row">
     <form role="form" class="col-md-offset-1 col-md-10" method="post" action="search">
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="form-group">
-                <input type="number" class="form-control" name="year" id="year" placeholder="year">
+                <input type="number" class="form-control" name="year" id="year" placeholder="2016">
                 <label for="year">年</label>
             </div>
             <div class="form-group">
@@ -45,7 +45,7 @@
                 <label for="month">日</label>
             </div>
         </div>
-        <div class="form-group col-md-offset-1 col-md-2">
+        <div class="form-group col-md-2">
             <label for="quarter">第</label>
             <select class="form-control short-form" name="quarter" id="quarter">
                 <option></option>
@@ -56,7 +56,7 @@
             </select>
             <label for="quarter">季度</label>
         </div>
-        <div class="form-group col-md-offset-1 col-md-2">
+        <div class="form-group col-md-2">
             <label for="day">星期</label>
             <select class="form-control short-form" name="day" id="day">
                 <option></option>
@@ -69,17 +69,29 @@
                 <option>日</option>
             </select>
         </div>
+        <div class="input-group col-md-3">
+            <span class="input-group-addon">导演姓名</span>
+            <input name="director" id="director" type="text" class="form-control" placeholder="Director">
+        </div>
         <div class="input-group col-md-4">
             <span class="input-group-addon">电影名称</span>
             <input name="movie" id="moive" type="text" class="form-control" placeholder="Moive name">
         </div>
-        <div class="input-group col-md-4">
-            <span class="input-group-addon">导演姓名</span>
-            <input name="director" id="director" type="text" class="form-control" placeholder="Director">
+        <label class="col-md-1" id="category-label">类别</label>
+        <div class="form-group col-md-2">
+            <select class="form-control category" name="category1" id="category1">
+                <option></option>
+            </select>
         </div>
-        <div class="input-group col-md-2">
-            <span class="input-group-addon">类别</span>
-            <input name="category" id="category" type="text" class="form-control" placeholder="Category">
+        <div class="form-group col-md-2">
+            <select class="form-control category" name="category2" id="category2">
+                <option></option>
+            </select>
+        </div>
+        <div class="form-group col-md-2">
+            <select class="form-control category" name="category3" id="category3">
+                <option></option>
+            </select>
         </div>
         <div class="input-group col-md-4">
             <span class="input-group-addon">主演演员</span>

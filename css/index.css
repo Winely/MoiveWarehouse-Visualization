@@ -16,8 +16,9 @@
 
 .query-form .input-group{
     display: inline-table;
-    margin: 10px;
     float: inherit;
+    margin-left: 14px;
+    margin-right: 14px;
 }
 
 .btn{
@@ -52,5 +53,11 @@
 .table{
     width: 94%;
     margin: auto;
+}
+
+#category-label{
+    text-align: right;
+    line-height: 2.5em;
+    padding-right: 0;
 }
 
