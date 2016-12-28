@@ -87,16 +87,18 @@
         </div>
         <div class="input-group col-md-4">
             <span class="input-group-addon">参演演员</span>
-            <input name="supporting_role" id="supporting_role" type="text" class="form-control" placeholder="Supporting role">
+            <input name="supporting_role" id="supporting_role" type="text" class="form-control"
+                   placeholder="Supporting role">
         </div>
         <div class="input-group col-md-2">
-            <button class="btn btn-primary" type="button" onClick="start_timekeeper()">Submit</button>
+            <button class="btn btn-primary" type="button" id="submit" onClick="start_timekeeper()">Submit</button>
         </div>
     </form>
 </div>
 <div class="result row">
     <div class="col-md-6" id="db">
-        <h2 class="title">MySQL<span class="time">(Time:</span><span id="time-MySQL" class="time"></span><span class="time">ms)</span></h2>
+        <h2 class="title">MySQL<span class="time">(Time:</span><span id="time-MySQL" class="time"></span><span
+                class="time">ms)</span></h2>
         <input type="button" value="停止计时！" onClick="end_timekeeper()">
         <table class="table table-hover">
             <thead>
@@ -171,11 +173,13 @@
         </table>
     </div>
 </div>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.js"></script>
-<script src="timekeeper.js"></script>
-<script src="date.js"></script>
+<script src="js/timekeeper.js"></script>
+<script src="js/date.js"></script>
+<script src="js/submit.js"></script>
 
 </body>
 </html>

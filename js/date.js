@@ -7,11 +7,11 @@ function YYYYMMDDstart(){
     //先给年下拉框赋内容
     var y  = new Date().getFullYear();
     for (var i = 1900; i < 2017; i++) //以今年为准，前30年，后30年
-        document.reg_testdate.YYYY.options.add(new Option(" "+ i +" 年", i));
+        document.reg_testdate.YYYY.options.add(new Option(" "+ i +" ", i));
 
     //赋月份的下拉框
     for (var i = 1; i < 13; i++)
-        document.reg_testdate.MM.options.add(new Option(" " + i + " 月", i));
+        document.reg_testdate.MM.options.add(new Option(" " + i + " ", i));
 
     // document.reg_testdate.YEAR.value = y;
     document.reg_testdate.YEAR.value = "";
@@ -47,7 +47,7 @@ function writeDay(n)   //据条件写日期的下拉框
 {
     var e = document.reg_testdate.DD; optionsClear(e);
     for (var i=1; i<(n+1); i++)
-        e.options.add(new Option(" "+ i + " 日", i));
+        e.options.add(new Option(" "+ i + " ", i));
 }
 function IsPinYear(year)//判断是否闰平年
 {
