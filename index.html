@@ -14,33 +14,24 @@
 </head>
 <body>
 <div class="query-form row">
-    <form role="form" class="col-md-offset-1 col-md-10" method="post" action="search">
+    <form role="form" class="col-md-offset-1 col-md-10" method="post" action="search" name="reg_testdate">
         <div class="col-md-4">
             <div class="form-group">
-                <input type="number" class="form-control" name="year" id="year" placeholder="2016">
+                <!--<input type="number" class="form-control" name="year" id="year" placeholder="2016">-->
+                <select class="form-control short-form" name="YYYY" id="year" onChange="YYYYDD(this.value)">
+                    <option value=""></option>
+                </select>
                 <label for="year">年</label>
             </div>
             <div class="form-group">
-                <select class="form-control short-form" name="month" id="month">
-                    <option></option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
+                <select class="form-control short-form" name="MM" id="month" onChange="MMDD(this.value)">
+                    <option value=""></option>
                 </select>
                 <label for="month">月</label>
             </div>
             <div class="form-group">
-                <select class="form-control short-form" name="date" id="date">
-                    <option></option>
+                <select class="form-control short-form" name="DD" id="date">
+                    <option value=""></option>
                 </select>
                 <label for="month">日</label>
             </div>
@@ -99,13 +90,14 @@
             <input name="supporting_role" id="supporting_role" type="text" class="form-control" placeholder="Supporting role">
         </div>
         <div class="input-group col-md-2">
-            <button class="btn btn-primary" type="submit">Submit</button>
+            <button class="btn btn-primary" type="button" onClick="start_timekeeper()">Submit</button>
         </div>
     </form>
 </div>
 <div class="result row">
     <div class="col-md-6" id="db">
-        <h2 class="title">MySQL<span class="time">(Time:12345 ms)</span></h2>
+        <h2 class="title">MySQL<span class="time">(Time:</span><span id="time-MySQL" class="time"></span><span class="time">ms)</span></h2>
+        <input type="button" value="停止计时！" onClick="end_timekeeper()">
         <table class="table table-hover">
             <thead>
             <tr>
@@ -182,5 +174,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.js"></script>
+<script src="timekeeper.js"></script>
+<script src="date.js"></script>
+
 </body>
 </html>
