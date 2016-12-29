@@ -36,9 +36,9 @@ A,B,C...表示一级目录；A_a,B_c...表示二级目录；A_c_1...表示三级
 发送的数据举例：
 
     {
-        "category1":"一级目录B",            //一级目录
-        "category2":"二级目录B_a",          //二级目录
-        "category3":"三级目录B_a_3",        //三级目录
+        "category1":"B",                   //一级目录
+        "category2":"B_a",                 //二级目录
+        "category3":"B_a_3",               //三级目录
         "date":"",                         //日  
         "day":"",                          //星期  
         "director":"abc",                  //导演  
