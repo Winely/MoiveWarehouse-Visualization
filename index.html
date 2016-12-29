@@ -33,7 +33,7 @@
                 <select class="form-control short-form" name="DD" id="date">
                     <option value=""></option>
                 </select>
-                <label for="month">日</label>
+                <label for="date">日</label>
             </div>
         </div>
         <div class="form-group col-md-2">
@@ -66,19 +66,18 @@
         </div>
         <div class="input-group col-md-4">
             <span class="input-group-addon">电影名称</span>
-            <input name="movie" id="moive" type="text" class="form-control" placeholder="Moive name">
+            <input name="movie" id="movie" type="text" class="form-control" placeholder="Moive name">
         </div>
         <div class="form-group col-md-7">
             <label class="" id="category-label">类别</label>
-            <select class="form-control category" name="category1" id="category1">
-                <option></option>
-                <option>Sony Pictures Home Entertainment</option>
+            <select class="form-control category" name="category1" id="category1" onchange="change1(this.value)">
+                <option value=""></option>
             </select>
-            <select class="form-control category" name="category2" id="category2">
-                <option></option>
+            <select class="form-control category" name="category2" id="category2" onchange="change2(this.value)">
+                <option value=""></option>
             </select>
             <select class="form-control category" name="category3" id="category3">
-                <option></option>
+                <option value=""></option>
             </select>
         </div>
         <div class="input-group col-md-4">
@@ -99,7 +98,8 @@
     <div class="col-md-6" id="db">
         <h2 class="title">MySQL<span class="time">(Time:</span><span id="time-MySQL" class="time"></span><span
                 class="time">ms)</span></h2>
-        <input type="button" value="停止计时！" onClick="end_timekeeper()">
+        <input type="button" value="mysql停止计时！" onClick="end_timekeeper1()">
+        <input type="button" value="HDFS停止计时！" onClick="end_timekeeper2()">
         <table class="table table-hover">
             <thead>
             <tr>
@@ -107,36 +107,22 @@
                 <th>name</th>
             </tr>
             </thead>
-            <tbody>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
+            <tbody id="table-MYSQL">
+            <!--<tr onclick="clickMovie('0767815335')">-->
+                <!--<td>0767815335</td>-->
+                <!--<td>fsafdsafds</td>-->
+            <!--</tr>-->
+            <!--<tr onclick="clickMovie('0767815335')">-->
+                <!--<td>0767815335</td>-->
+                <!--<td>fsafdsafds</td>-->
+            <!--</tr>-->
+
             </tbody>
         </table>
     </div>
     <div class="col-md-6" id="dfs">
-        <h2 class="title">HDFS<span class="time">(Time:12345 ms)</span></h2>
+        <h2 class="title">HDFS<span class="time">(Time:</span><span id="time-HDFS" class="time"></span><span
+                class="time">ms)</span></h2>
         <table class="table table-hover">
             <thead>
             <tr>
@@ -144,31 +130,16 @@
                 <th>name</th>
             </tr>
             </thead>
-            <tbody>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
-            <tr onclick="clickMovie('0767815335')">
-                <td>0767815335</td>
-                <td>fsafdsafds</td>
-            </tr>
+            <tbody id="table-HDFS">
+            <!--<tr onclick="clickMovie('0767815335')">-->
+                <!--<td>0767815335</td>-->
+                <!--<td>fsafdsafds</td>-->
+            <!--</tr>-->
+            <!--<tr onclick="clickMovie('0767815335')">-->
+                <!--<td>0767815335</td>-->
+                <!--<td>fsafdsafds</td>-->
+            <!--</tr>-->
+
             </tbody>
         </table>
     </div>
@@ -179,6 +150,7 @@
 <script src="js/index.js"></script>
 <script src="js/timekeeper.js"></script>
 <script src="js/date.js"></script>
+<script src="js/category.js"></script>
 <script src="js/submit.js"></script>
 
 </body>
