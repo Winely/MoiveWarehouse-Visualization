@@ -62,10 +62,12 @@ function writeDay(n)   //据条件写日期的下拉框
     for (var i = 1; i < (n + 1); i++)
         e.options.add(new Option(" " + i + " ", i));
 }
+
 function IsPinYear(year)//判断是否闰平年
 {
     return (0 == year % 4 && (year % 100 != 0 || year % 400 == 0));
 }
+
 function optionsClear(e) {
     e.options.length = 1;
 }

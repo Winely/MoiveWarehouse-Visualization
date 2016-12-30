@@ -1135,7 +1135,6 @@ var change1 = function (src) {
         category2.options[category2.length] = op;
     }
 
-    //记住你选的省份的值是什么
     category1Name = src;
 
 }
