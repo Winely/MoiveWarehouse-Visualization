@@ -5,6 +5,8 @@ $(function () {
     $("#submit").click(function () {
         $("#table-MYSQL").empty();
         $("#table-HDFS").empty();
+        $("#result-MYSQL").html("");
+        $("#result-HDFS").html("");
         var param = {};
         param['year'] = $('#year option:selected').val();
         param['month'] = $('#month option:selected').val();
@@ -20,20 +22,25 @@ $(function () {
         param['hero'] = $('#hero').val();
         param['supporting_role'] = $('#supporting_role').val();
 
-        console.log(param);
-        // var t = [
-        //     {"ID": "0767815335", "name": "asdasd"},
-        //     {"ID": "0767815336", "name": "aaaaa"},
-        //     {"ID": "0767815337", "name": "bbbbb"}
-        // ];
+        // console.log(param);
+        // var t =     {
+        //     "total": 14145,                     //符合条件的电影总数
+        //     "result": [
+        //         {"ID": "0767815335", "name": "asdasd"},
+        //         {"ID": "0767815336", "name": "aaaaa"},
+        //         {"ID": "0767815337", "name": "bbbbb"}
+        //     ]
+        // };
         // var obj = eval(t);
-        // for (var i = 0; i < obj.length; i++) {
+        // $("#result-MySQL").html(obj.total);
+        // $("#result-HDFS").html(obj.total);
+        // for (var i = 0; i < obj.result.length; i++) {
         //     $("#table-HDFS").append(
         //         '<tr onclick="clickMovie(' +
-        //         '\'' + obj[i].ID + '\'' +
+        //         '\'' + obj.result[i].ID + '\'' +
         //         ')">' +
-        //         '<td>' + obj[i].ID + '</td>' +
-        //         '<td>' + obj[i].name + '</td>' +
+        //         '<td>' + obj.result[i].ID + '</td>' +
+        //         '<td>' + obj.result[i].name + '</td>' +
         //         '</tr>'
         //     );
         // }
@@ -55,13 +62,14 @@ $(function () {
             end_timekeeper1();//停止计时
             //解析数据放入表格
             var obj = eval(response);
-            for (var i = 0; i < obj.length; i++) {
+            $("#result-MySQL").html(obj.total);
+            for (var i = 0; i < obj.result.length; i++) {
                 $("#table-MYSQL").append(
                     '<tr onclick="clickMovie(' +
-                    '"' + obj[i].ID + '"' +
+                    '"' + obj.result[i].ID + '"' +
                     ')">' +
-                    '<td>' + obj[i].ID + '</td>' +
-                    '<td>' + obj[i].name + '</td>' +
+                    '<td>' + obj.result[i].ID + '</td>' +
+                    '<td>' + obj.result[i].name + '</td>' +
                     '</tr>'
                 );
             }
@@ -72,13 +80,14 @@ $(function () {
             end_timekeeper2();//停止计时
             //解析数据放入表格
             var obj = eval(response);
-            for (var i = 0; i < obj.length; i++) {
+            $("#result-HDFS").html(obj.total);
+            for (var i = 0; i < obj.result.length; i++) {
                 $("#table-HDFS").append(
                     '<tr onclick="clickMovie(' +
-                    '"' + obj[i].ID + '"' +
+                    '"' + obj.result[i].ID + '"' +
                     ')">' +
-                    '<td>' + obj[i].ID + '</td>' +
-                    '<td>' + obj[i].name + '</td>' +
+                    '<td>' + obj.result[i].ID + '</td>' +
+                    '<td>' + obj.result[i].name + '</td>' +
                     '</tr>'
                 );
             }
