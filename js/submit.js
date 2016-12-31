@@ -89,7 +89,7 @@ $(function () {
                     '<td>' + obj.result[i].ID + '</td>' +
                     '<td>' + obj.result[i].name + '</td>' +
                     '</tr>'
-                );
+            );
             }
         });
 
