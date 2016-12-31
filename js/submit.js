@@ -63,7 +63,7 @@ $(function () {
             //解析数据放入表格
             var obj = eval(response);
             $("#result-MySQL").html(obj.total);
-            for (var i = 0; i < obj.result.length; i++) {
+            for (var i = 0; i < obj.result.length && i < 100; i++) {
                 $("#table-MYSQL").append(
                     '<tr onclick="clickMovie(' +
                     '"' + obj.result[i].ID + '"' +
@@ -81,7 +81,7 @@ $(function () {
             //解析数据放入表格
             var obj = eval(response);
             $("#result-HDFS").html(obj.total);
-            for (var i = 0; i < obj.result.length; i++) {
+            for (var i = 0; i < obj.result.length && i < 100; i++) {
                 $("#table-HDFS").append(
                     '<tr onclick="clickMovie(' +
                     '"' + obj.result[i].ID + '"' +
